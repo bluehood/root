@@ -1043,7 +1043,6 @@ void* TGenCollectionProxy::At(UInt_t idx)
    if ( fEnv && fEnv->fObject ) {
       switch (fSTL_type) {
       case ROOT::kSTLvector:
-      case ROOT::kROOTRVec:  // TODO will be unnecessary with RVec 2.0
          if ((*fValue).fKind == kBool_t) {
             auto vec = (std::vector<bool> *)(fEnv->fObject);
             fEnv->fLastValueVecBool = (*vec)[idx];
